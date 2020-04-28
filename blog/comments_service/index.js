@@ -35,7 +35,7 @@ app.post('/posts/:id/comments', async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-
+  console.log(comments);
   res.status(201).send(comments);
 });
 
@@ -58,6 +58,7 @@ app.post('/events', async (req, res) => {
       type: 'CommentUpdated',
       data: {
         id,
+        content,
         status,
         postId,
       },

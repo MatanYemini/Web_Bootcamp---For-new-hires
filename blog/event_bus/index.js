@@ -7,6 +7,7 @@ app.use(bodyParser.json());
 
 app.post('/events', async (req, res) => {
   const event = req.body;
+  console.log(event);
   try {
     await axios.post('http://localhost:4001/events', event);
   } catch (error) {
