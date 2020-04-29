@@ -22,7 +22,7 @@ app.post('/events', async (req, res) => {
       },
     });
   }
-  console.log(data.content);
+
   res.send({});
 });
 
