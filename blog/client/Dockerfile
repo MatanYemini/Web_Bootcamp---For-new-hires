@@ -1,6 +1,8 @@
 # basic setup image
 FROM node:alpine
 
+ENV CI=true
+
 # our working directory
 WORKDIR /app
 COPY package.json ./
